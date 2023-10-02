@@ -1,6 +1,7 @@
 '''
 @author: Devangini Patel
 '''
+import matplotlib.pyplot as plt
 
 #connections between places
 connections = {}
@@ -28,3 +29,22 @@ location["Canteen"] = [6, 1]
 location["AI Lab"] = [6, 0]
 location["Theater"] = [7, 7]
 location["Sports Center"] = [7, 5]
+
+# Extract x and y coordinates
+x_coords = [coord[0] for coord in location.values()]
+y_coords = [coord[1] for coord in location.values()]
+
+# Plot the locations
+plt.scatter(x_coords, y_coords)
+
+# Label the points
+for location, (x, y) in location.items():
+    plt.text(x, y, location)
+
+# Add labels and title
+plt.xlabel('X Coordinate')
+plt.ylabel('Y Coordinate')
+plt.title('Locations')
+
+# Show the plot
+plt.show()

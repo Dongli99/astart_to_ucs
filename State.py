@@ -36,5 +36,5 @@ class State:
         """
         This method checks whether the current place is AI Lab
         """ 
-        #check if the place is AI Lab
+        # Check if the place is AI Lab
         return self.place == "AI Lab"

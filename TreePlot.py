@@ -34,7 +34,7 @@ class TreePlot:
         #create node
         parentGraphNode = pydot.Node(str(self.index) + " " + \
             node.state.place, style="filled", \
-            fillcolor = color, xlabel = node.heuristic)
+            fillcolor = color, xlabel = node.costFromRoot)
         self.index += 1
         
         #add node
